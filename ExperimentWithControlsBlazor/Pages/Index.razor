@@ -15,7 +15,7 @@
     <div class="row mt-2">
         <div class="col-sm-6">Click a button:</div>
         <div class="col-sm-6 btn-group" role="group">
-            @for(var buttonNumber = 0;buttonNumber <=6; buttonNumber++)
+            @for (var buttonNumber = 0; buttonNumber <= 6; buttonNumber++)
             {
                 string valueToDisplay = $"Button #{buttonNumber}";
                 <button type="button" class="btn btn-secondary" @onclick="()=>ButtonClick(valueToDisplay)">
@@ -30,6 +30,18 @@
         </div>
         <div class="col-sm-6">
             <input type="text" placeholder="Enter text" @onchange="UpdateNumericValue" />
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-sm-6">Pick a date:</div>
+        <div class="col-sm-6">
+            <input type="date" @onchange="UpdateValue" />
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-sm-6">Pick a color:</div>
+        <div class="col-sm-6">
+            <input type="color" @onchange="UpdateValue" />
         </div>
     </div>
     <div class="row mt-5">
